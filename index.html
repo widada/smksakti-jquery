@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+    <style>
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.5s ease; /* Animasi perubahan opasitas */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            margin: 10px;
+            opacity: 0; /* Mulai dengan menyembunyikan kotak */
+        }
+
+        #flower:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- menampilkan icon -->
+
+    <!-- <i class="fa-solid fa-user"></i>
+    <i class="fa-brands fa-github-square"></i>
+    <i class="fa-solid fa-car-side fa-10x" style="color: rgb(0, 145, 255)"></i> -->
+    <!-- uses brand style -->
+
+    <!-- animasi -->
+    <!-- <div class="btn-container">
+        <button id="devi" class="btn">Tombol</button>
+    </div>
+    
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> -->
+
+    <!-- belajar events -->
+    <!-- <img id="flower" src="https://png.pngtree.com/png-clipart/20230426/original/pngtree-a-small-pink-white-flower-picture-image_5803483.png" width="400px"/> -->
+    <input id="inputan" type="text" width="1000">
+    <p id="pesan-error-password" style="color: red"></p>
+</body>
+<script>
+    $(document).ready(function(){
+        // Menampilkan tombol dengan animasi muncul
+        // $('.btn').fadeIn(1000);
+
+        // Menghilangkan tombol saat diklik dengan animasi
+        // $('#devi').click(function(){
+        //     $(this).fadeOut(5000);
+        // });
+
+        // animasi
+        // $('.box').each(function(i) {
+        //     $(this).delay(1000 * i).animate({ opacity: 1 }, 1000);
+        // });
+
+        // belajar event click
+        // $('#flower').click(function() {
+        //     $('#flower').fadeOut(2000);
+        // });
+
+        // belajar onkeyup
+        $('#inputan').keyup(function() {
+            var inputan = $('#inputan').val();
+            if (inputan.length <= 5) {
+                $('#pesan-error-password').text('Password tidak minimal 5 karakter');
+            } else {
+                $('#pesan-error-password').text('udah sip');
+            }
+        });
+    });
+</script>
+</html>
+
